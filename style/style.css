@@ -49,7 +49,7 @@ main {
 	height: .3rem;
 	left: 0;
 	top: 1.75rem;
-	width: 19rem;
+	width: 310px;
 }
 .progress-line-on-top {
 	background-color: LightSlateGray;
@@ -58,7 +58,7 @@ main {
 	height: .3rem;
 	left: 0;
 	top: 1.97rem;
-	width: 15rem;
+	width: 265px;
 }
 
 /* controls format start */
@@ -86,6 +86,12 @@ main {
 .play-button-off > img {
     display: none;
 }
+.play-button-off > img {
+    height: 1rem;
+    margin-top: .35rem;
+    width: 1rem;
+}
+
 .volume > img {
     height: .9rem;
     margin-top: .45rem;
@@ -103,9 +109,6 @@ main {
 .volume-mute-off > img{
     display: none;
 }
-
-
-
 .volume-mute-on > img{
     display: block;
     float: left;
@@ -113,15 +116,13 @@ main {
     margin-top: .45rem;
     width: 1rem;
 }
-
-
-
 .pauseOff > img {
     display: none;
 }
 .pause-button-on > img {
-    width: 1rem;
     height: 1rem;
+    margin-top: .35rem;
+    width: 1rem; 
 }
 .pause-button-off > img {
     display: none;
@@ -194,6 +195,11 @@ main {
     border-radius: .05rem;
 }
 
+/* changed color of the song currently playing */
+.changed-title-song-0, .changed-title-song-1, .changed-title-song-2, .changed-title-song-3, .changed-title-song-4, .changed-title-song-5, .changed-title-song-6, .changed-title-song-7, .changed-title-song-8, .changed-title-song-9, .time0, .time1, .time2, .time3, .time4, .time5, .time6, .time7, .time8, .time9 {
+    color: LightSlateGray !important;
+}
+
 /* social media icons */
 .img-fb-style {
     padding-top: 0;
@@ -222,7 +228,7 @@ footer div {
     margin: auto;
     padding: .8rem;
     text-align: center;
-    width: 43rem;
+    width: 43.4rem;
 }
 footer a {
     color: LightSlateGray;
