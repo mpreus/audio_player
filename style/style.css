@@ -100,6 +100,22 @@ main {
     margin-top: .28rem;
 	width: 1rem;
 }
+.volume-mute-off > img{
+    display: none;
+}
+
+
+
+.volume-mute-on > img{
+    display: block;
+    float: left;
+    height: .8rem;
+    margin-top: .45rem;
+    width: 1rem;
+}
+
+
+
 .pauseOff > img {
     display: none;
 }
@@ -154,7 +170,7 @@ main {
     margin-bottom: .6rem; 
 }
 
-/* scroll bar */
+/* scroll bar for songs */
 .right-content-scroll {
     float: left;
     position: relative;
@@ -195,7 +211,6 @@ main {
     margin-left: 2.4rem;
 }
 
-
 /* footer part */
 footer div {
     background-color: #232332;
@@ -214,7 +229,9 @@ footer a {
     font-weight: bold;
     text-decoration: none;
 }
-
+footer a:hover {
+    color: #fff;
+}
 
 
 
