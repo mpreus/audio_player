@@ -470,9 +470,12 @@ function init() {
 	    else if (i === 8) {
 	        PlayNinthSong();
 	    }
-	    else if (i >= 9){
-	        i = 0;
+	    else if (i === 9){
 	        PlayTenthSong();
+	    }
+	    else if (i >= 10){
+	        i = 0;
+	        PlayFirstSong();
 	    }
 	    else if (i < 0){
 	        i = 0;
@@ -527,10 +530,18 @@ function init() {
 	}
 
 	function unMute() {
-	    muteButton.classList.add("volume");
 	    muteButton.classList.remove("volume-off");
-	    unMuteButton.classList.add("volume-mute-off");
+	    muteButton.classList.add("volume");
 	    unMuteButton.classList.remove("volume-mute-on");
+	    unMuteButton.classList.add("volume-mute-off");
 	    playerAudio.muted = false;
 	}
+	
 }
+
+
+
+
+
+
+
