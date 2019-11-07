@@ -39,6 +39,7 @@ function init() {
 		time8 = document.getElementById("time-8"),
 		time9 = document.getElementById("time-9");
 
+/* all songs to array */
 	let songTable = ["audio/01%20Where%20Do%20You%20Think%20You%27re%20Going.mp3", "audio/02%20Your%20Latest%20Trick.mp3", "audio/03%20Romeo%20and%20Juliet.mp3", "audio/04%20Private%20Investigations.mp3", "audio/05%20You%20and%20Your%20frend.mp3", "audio/06%20Once%20Upon%20a%20time%20in%20the%20west.mp3", "audio/07%20Telegraph%20road.mp3", "audio/08%20Brothers%20in%20Arms.mp3", "audio/09%20The%20Gallery.mp3", "audio/10%20Ticket%20to%20Heaven.mp3"];
 
 /* functions on click on the buttons */
@@ -129,16 +130,16 @@ function init() {
 	function PlaySecondSong() {
     	i = 1;
     	playerAudio.src = songTable[1];
-    	song1.classList.add("change-title-song-1");
-    	song0.classList.remove("change-title-song-0");
-    	song2.classList.remove("change-title-song-2");
-    	song3.classList.remove("change-title-song-3");
-    	song4.classList.remove("change-title-song-4");
-    	song5.classList.remove("change-title-song-5");
-    	song6.classList.remove("change-title-song-6");
-    	song7.classList.remove("change-title-song-7");
-    	song8.classList.remove("change-title-song-8");
-    	song9.classList.remove("change-title-song-9");
+    	song1.classList.add("changed-title-song-1");
+    	song0.classList.remove("changed-title-song-0");
+    	song2.classList.remove("changed-title-song-2");
+    	song3.classList.remove("changed-title-song-3");
+    	song4.classList.remove("changed-title-song-4");
+    	song5.classList.remove("changed-title-song-5");
+    	song6.classList.remove("changed-title-song-6");
+    	song7.classList.remove("changed-title-song-7");
+    	song8.classList.remove("changed-title-song-8");
+    	song9.classList.remove("changed-title-song-9");
 	
     	time1.classList.add("time1");
     	time0.classList.remove("time0");
@@ -470,14 +471,14 @@ function init() {
 	    else if (i === 8) {
 	        PlayNinthSong();
 	    }
-	    else if (i === 9){
+	    else if (i === 9) {
 	        PlayTenthSong();
 	    }
-	    else if (i >= 10){
+	    else if (i >= 10) {
 	        i = 0;
 	        PlayFirstSong();
 	    }
-	    else if (i < 0){
+	    else if (i < 0) {
 	        i = 0;
 	    }
 	}
@@ -511,9 +512,11 @@ function init() {
 	    else if (i === 8) {
 	        PlayNinthSong();
 	    }
-	    else if (i >= 9) {
-	        i = 0;
-	        PlayFirstSong();
+	    else if (i === 9) {
+	        PlayTenthSong();
+	    }
+	    else if (i >= 10) {
+	    	PlayFirstSong();
 	    }
 	    else if (i < 0) {
 	        i = 9;
@@ -536,7 +539,7 @@ function init() {
 	    unMuteButton.classList.add("volume-mute-off");
 	    playerAudio.muted = false;
 	}
-	
+
 }
 
 
