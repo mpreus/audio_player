@@ -194,6 +194,7 @@ main {
 /* changed color of the song currently playing */
 .changed-title-song-0, .changed-title-song-1, .changed-title-song-2, .changed-title-song-3, .changed-title-song-4, .changed-title-song-5, .changed-title-song-6, .changed-title-song-7, .changed-title-song-8, .changed-title-song-9, .time0, .time1, .time2, .time3, .time4, .time5, .time6, .time7, .time8, .time9 {
     color: LightSlateGray !important;
+    font-weight: bold;
 }
 
 /* social media icons */

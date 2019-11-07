@@ -12,9 +12,8 @@ function init() {
 		unMuteButton = document.getElementById("unMuteButton");
 /* checking the elements in the console: */
 	console.log(playerAudio, playButton, pauseButton, playPrevSong, playNextSong, progress, muteButton, unMuteButton);
-	let resTime = 0,
-		i = 0;
-
+	// let i = 0;
+		
 /* links to songs to variables */
 	let song0 = document.getElementById("song-0"),
 		song1 = document.getElementById("song-1"),
@@ -40,7 +39,7 @@ function init() {
 		time9 = document.getElementById("time-9");
 
 /* all songs to array */
-	let songTable = ["audio/01%20Where%20Do%20You%20Think%20You%27re%20Going.mp3", "audio/02%20Your%20Latest%20Trick.mp3", "audio/03%20Romeo%20and%20Juliet.mp3", "audio/04%20Private%20Investigations.mp3", "audio/05%20You%20and%20Your%20frend.mp3", "audio/06%20Once%20Upon%20a%20time%20in%20the%20west.mp3", "audio/07%20Telegraph%20road.mp3", "audio/08%20Brothers%20in%20Arms.mp3", "audio/09%20The%20Gallery.mp3", "audio/10%20Ticket%20to%20Heaven.mp3"];
+	let songTable = ["audio/01%20Where%20Do%20You%20Think%20You%27re%20Going.mp3", "audio/02%20Your%20Latest%20Trick.mp3", "audio/03%20Romeo%20and%20Juliet.mp3", "audio/04%20Private%20Investigations.mp3", "audio/05%20You%20and%20Your%20friend.mp3", "audio/06%20Once%20Upon%20a%20time%20in%20the%20west.mp3", "audio/07%20Telegraph%20road.mp3", "audio/08%20Brothers%20in%20Arms.mp3", "audio/09%20The%20Gallery.mp3", "audio/10%20Ticket%20to%20Heaven.mp3"];
 
 /* functions on click on the buttons */
 	playButton.addEventListener("click", ChangePlayButtonToPauseButton);
@@ -82,18 +81,19 @@ function init() {
 /* 3. to visualize progress */
 	function goWithProgressOfSong() {
     	progress.offsetWidth = 0;
-    	let id = setInterval(frame, 5);
-    	function frame(){
-        	if (playerAudio.readyState){
+    	var id = setInterval(frame, 5);
+    	function frame() {
+        	let	resTime = 0;
+        	if (playerAudio.readyState) {
             	resTime = (playerAudio.currentTime * 310) / playerAudio.duration;
-            	progress.style.width = resTime; 
+            	
+            	progress.style.width = resTime + "px"; 
         	}
     	}
 	}
 
 /* 4. to play songs */
 	function PlayFirstSong() {
-    	i = 0;
     	playerAudio.src = songTable[0];
     	song0.classList.add("changed-title-song-0");
     	song1.classList.remove("changed-title-song-1");
@@ -128,7 +128,6 @@ function init() {
 	}
 
 	function PlaySecondSong() {
-    	i = 1;
     	playerAudio.src = songTable[1];
     	song1.classList.add("changed-title-song-1");
     	song0.classList.remove("changed-title-song-0");
@@ -163,7 +162,6 @@ function init() {
 	}
 
 	function PlayThirdSong() {
-    	i = 2;
     	playerAudio.src = songTable[2];
     	song2.classList.add("changed-title-song-2");
     	song0.classList.remove("changed-title-song-0");
@@ -198,7 +196,6 @@ function init() {
 	}
 
 	function PlayFourthSong() {
-	    i = 3;
 	    playerAudio.src = songTable[3];
 	    song3.classList.add("changed-title-song-3");
 	    song0.classList.remove("changed-title-song-0");
@@ -233,7 +230,6 @@ function init() {
 	}
 
 	function PlayFifthSong() {
-	    i = 4;
 	    playerAudio.src = songTable[4];
 	    song4.classList.add("changed-title-song-4");
 	    song0.classList.remove("changed-title-song-0");
@@ -268,7 +264,6 @@ function init() {
 	}
 
 	function PlaySixthSong() {
-	    i = 5;
 	    playerAudio.src = songTable[5];
 	    song5.classList.add("changed-title-song-5");
 	    song0.classList.remove("changed-title-song-0");
@@ -303,7 +298,6 @@ function init() {
 	}
 
 	function PlaySeventhSong() {
-	    i = 6;
 	    playerAudio.src = songTable[6];
 	    song6.classList.add("changed-title-song-6");
 	    song0.classList.remove("changed-title-song-0");
@@ -338,7 +332,6 @@ function init() {
 	}
 
 	function PlayEighthSong() {
-	    i = 7;
 	    playerAudio.src = songTable[7];
 	    song7.classList.add("changed-title-song-7");
 	    song0.classList.remove("changed-title-song-0");
@@ -373,7 +366,6 @@ function init() {
 	}
 
 	function PlayNinthSong() {
-	    i = 8;
 	    playerAudio.src = songTable[8];
 	    song8.classList.add("changed-title-song-8");
 	    song0.classList.remove("changed-title-song-0");
@@ -408,7 +400,6 @@ function init() {
 	}
 
 	function PlayTenthSong() {
-	    i = 9;
 	    playerAudio.src = songTable[9];
 	    song9.classList.add("changed-title-song-9");
 	    song0.classList.remove("changed-title-song-0");
@@ -441,8 +432,10 @@ function init() {
 	    playerAudio.play();
 	    goWithProgressOfSong();
 	}
-
+	
+	let i = 0;
 	function PlayNextSong() {
+	    
 	    ++i;
 	    if (i === 0) {
 	        PlayFirstSong();
