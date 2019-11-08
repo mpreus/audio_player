@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- dopisać pozostałe elementy 'meta' -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="audio files player">
@@ -12,9 +11,19 @@
 	<script type="text/javascript" src="script/script.js"></script>
 </head>
 <body>
-	
+	<h1>your audio player</h1>
+	<h2>There is a set of songs available to play on the right panel</h2>
+	<p>
+		Click 'play' button to listen to the song and 'pause' button to pause it.
+	</p>
+	<p>
+		Use 'next' and 'previous' buttons to listen to other songs just the way we use them on any player.
+	</p>
+	<p>
+		There are also 'mute' and 'unmute' functions available by using the icons of loudspeakers.
+	</p>
 	<audio id="player-audio">
-		<!-- in the audio engine list of songs -->
+	<!-- in this audio engine list of songs (all in the 'audio' folder) -->
 		<source src="audio/01%20Where%20Do%20You%20Think%20You%27re%20Going.mp3" type="audio/mpeg">
 		<source src="audio/02%20Your%20Latest%20Trick.mp3" type="audio/mpeg">
 		<source src="audio/03%20Romeo%20and%20Juliet.mp3" type="audio/mpeg">
@@ -33,14 +42,14 @@
 			<img src="images/playthemusic.jpg" alt="photo" title="Vintage photo created by jcomp - www.freepik.com">
 			<!-- <a href="https://www.freepik.com/free-photos-vectors/vintage">Vintage photo created by jcomp - www.freepik.com</a> -->
 			
-		<!-- playing progress -->
+		<!-- playing progress bar (animated) -->
 			<div class="progress-line">
 				<div id="progress-bottom" class="progress-line-bottom">	
 				</div>
 				<div id="progress-on" class="progress-line-on-top">
 				</div>
 			</div>
-		<!-- controls icons -->
+		<!-- controls' icons -->
 			<div class="controls">
 				<div id="prevButton" class="prev">
 					<img src="images/prev.png" alt="prev button">
@@ -83,24 +92,24 @@
 		<!-- songs' time section -->
 			<div class="right-content-times">
 				<ul>
-	                <li id="time-0">3:47</li>
-	                <li id="time-1">6:32</li>
-	                <li id="time-2">5:57</li>
-	                <li id="time-3">6:45</li>
-	                <li id="time-4">5:57</li>
-	                <li id="time-5">5:17</li>
-	                <li id="time-6">14:16</li>
-	                <li id="time-7">6:58</li>
-	                <li id="time-8">6:16</li>
-	                <li id="time-9">4:25</li>
+	                <li id="time-0"><a>3:47</a></li>
+	                <li id="time-1"><a>6:32</a></li>
+	                <li id="time-2"><a>5:57</a></li>
+	                <li id="time-3"><a>6:45</a></li>
+	                <li id="time-4"><a>5:57</a></li>
+	                <li id="time-5"><a>5:17</a></li>
+	                <li id="time-6"><a>14:16</a></li>
+	                <li id="time-7"><a>6:58</a></li>
+	                <li id="time-8"><a>6:16</a></li>
+	                <li id="time-9"><a>4:25</a></li>
 	            </ul>
 			</div>
-		<!-- scroll bar -->
+		<!-- scroll bar (static) -->
 			<div class="right-content-scroll">
 	            <div class="scroll-bottom"></div>
 				<div class="scroll-on-top"></div>
         	</div>
-		<!-- social media icons -->
+		<!-- social media icons (facebook & twitter active links) -->
 			<div class="social-media-content">
 			    <a href="https://www.facebook.com/"><img class="img-fb-style" src="images/facebook.png" alt="facebook" title="facebook link"/></a>    
 			    <img class="img-sc-style" src="images/soundcloud.png" alt="soundcloud"/>
@@ -117,14 +126,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-

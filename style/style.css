@@ -1,23 +1,41 @@
 /* simple reset to have the same appearance in all browsers */
 html, body, h1, h2, h3, p {
-	border: 0;
-	margin: 0;
-	padding: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* main elements */
-body {
-	background-color: silver;
-	font-family: Arial, sans-serif;
-	font-size: 20px;
+html, body {
+    background-color: silver;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+h1, h2, p {
+    color: #222;
+    text-align: center;
+}
+h1 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+p {
+    font-size: 1rem;
+    margin-bottom: .2rem;
 }
 
 /* player main part */
 main {
-	background-color: #232332;
-	border: .05rem solid LightSlateGray;
-	border-radius: 1rem;
-	box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #788977;
+    background-color: #232332;
+    border: .05rem solid LightSlateGray;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #788977;
     margin: auto;
     margin-top: 1rem;
     min-height: 20rem;
@@ -25,53 +43,53 @@ main {
     width: 45rem;
 }
 
-/* player left part */
+/* player left side part */
 .left-content {
     padding-left: 2rem;
     padding-top: 3.5rem;
     float: left;
 }
-
 .left-content > img {
-	border: .05rem solid silver;
-	border-radius: 1.6rem;
-	width: 19rem;
+    border: .05rem solid silver;
+    border-radius: 1.6rem;
+    width: 19rem;
 }
 
-/* progress line */
+/* songs' progress bar (horizontal-animated) */
 .progress-line {
-	padding-top: 2rem;
-	position: relative;
+    padding-top: 2rem;
+    position: relative;
 }
 .progress-line-bottom {
-	background-color: #393946;
-	border-radius: .15rem;
-	height: .3rem;
-	left: 0;
-	top: 1.75rem;
-	width: 310px;
+    background-color: #393946;
+    border-radius: .15rem;
+    height: .3rem;
+    left: 0;
+    top: 1.75rem;
+    width: 310px;
 }
 .progress-line-on-top {
-	background-color: LightSlateGray;
-	border-radius: .2rem;
-	position: absolute;
-	height: .3rem;
-	left: 0;
-	top: 1.97rem;
-	width: 265px;
+    background-color: LightSlateGray;
+    border-radius: .2rem;
+    position: absolute;
+    height: .3rem;
+    left: 0;
+    top: 1.97rem;
+    width: 265px;
 }
 
 /* controls format start */
 .controls {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .prev, .play-button-on, .pause-button-off, .next, .volume, .volume-mute-off, .volume-mute-on, .play-button-off, .volume-off, .pause-off, .pause-button-on {
-	margin: 0 1rem;
+    margin: 0 1rem;
 }
 .prev > img {
     height: .6rem;
+    margin-top: .65rem;
     width: .8rem;
 }
 .play-button-on > img {
@@ -85,6 +103,7 @@ main {
 }
 .next > img {
     height: .6rem;
+    margin-top: .65rem;
     width: .8rem;
 }
 .volume > img {
@@ -128,14 +147,15 @@ main {
 /* controls format end */
 
 
-/* player right part */
+/* player right side part */
 .right-content {
-	padding-left: 2rem;
-    padding-top: 1rem;
+    padding-left: 1.5rem;
+    padding-top: 2rem;
     float: left;
 }
 .right-content-titles {
     float: left;
+    padding-left: -1rem;
 }
 .right-content-titles ul li {
     list-style-type: none;
@@ -152,24 +172,26 @@ main {
 }
 .right-content-times {
     float: left;
+    margin-left: .5rem;
     padding-left: .1rem;
-    padding-top: 1rem;
+    padding-top: .5rem;
 }
 .right-content-times ul {
-	margin-top: .78rem;
-	padding-left: 1rem;
+    margin-top: .78rem;
+    padding-left: 1rem;
 }
 .right-content-times ul li {
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: .8rem;
     list-style-type: none;
-    margin-bottom: .6rem; 
+    margin-bottom: .35rem; 
 }
 
-/* scroll bar for songs */
+/* scroll bar for songs (vertical-static) */
 .right-content-scroll {
     float: left;
+    margin-left: .3rem;
     position: relative;
 }
 .scroll-bottom {
@@ -178,8 +200,8 @@ main {
     height: 10rem;
     left: 1.67rem;
     position: absolute;
-   	top: 3.5rem;
-   	width: .3rem;
+    top: 3.5rem;
+    width: .3rem;
 }
 .scroll-on-top {
     position: absolute;
@@ -227,6 +249,9 @@ footer div {
     text-align: center;
     width: 43.4rem;
 }
+footer p {
+    color: LightSlateGray;
+}
 footer a {
     color: LightSlateGray;
     font-weight: bold;
@@ -235,22 +260,4 @@ footer a {
 footer a:hover {
     color: #fff;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

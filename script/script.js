@@ -13,7 +13,7 @@ function init() {
 /* checking the elements in the console: */
 	console.log(playerAudio, playButton, pauseButton, playPrevSong, playNextSong, progress, muteButton, unMuteButton);
 	// let i = 0;
-		
+		playerAudio.volume = 0.5;
 /* links to songs to variables */
 	let song0 = document.getElementById("song-0"),
 		song1 = document.getElementById("song-1"),
@@ -533,11 +533,17 @@ function init() {
 	    playerAudio.muted = false;
 	}
 
+/* clicking on the song, plays it immediatelly */
+	song0.addEventListener("click", PlayFirstSong);
+	song1.addEventListener("click", PlaySecondSong);
+	song2.addEventListener("click", PlayThirdSong);
+	song3.addEventListener("click", PlayFourthSong);
+	song4.addEventListener("click", PlayFifthSong);
+	song5.addEventListener("click", PlaySixthSong);
+	song6.addEventListener("click", PlaySeventhSong);
+	song7.addEventListener("click", PlayEighthSong);
+	song8.addEventListener("click", PlayNinthSong);
+	song9.addEventListener("click", PlayTenthSong);
+
 }
-
-
-
-
-
-
 
